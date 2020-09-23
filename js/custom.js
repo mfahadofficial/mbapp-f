@@ -95,14 +95,14 @@ function startQue () {
 // /* Swapping functionality */
 
 $(function() {
-   $("#front-image").swipe( {
+   $(".f-image").swipe( {
      //Generic swipe handler for all directions
      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
          flipCard();
          $('btn-start').hide();
      }
    });
-   $("#front-image").swipe( {fingers:1} );
+   $(".f-image").swipe( {fingers:1} );
  });
 
  $(function() {
@@ -114,22 +114,22 @@ $(function() {
          $('.owl-carousel').trigger('next.owl.carousel');
      }
    });
-   $("#front-image").swipe( {fingers:1} );
+   $(".f-image").swipe( {fingers:1} );
  });
 
 
 $(function() {
-   $("#back-image").swipe( {
+   $(".b-image").swipe( {
      //Generic swipe handler for all directions
      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
          flipCard();
          $body.removeClass('answer');
-         $('#btn-question').show();
+         $('#btn-question').hide();
          $('.owl-carousel').trigger('next.owl.carousel');
 
      }
    });
-   $("#back-image").swipe( {fingers:1} );
+   $(".b-image").swipe( {fingers:1} );
  });
 
 
